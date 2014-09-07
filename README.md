@@ -3,33 +3,35 @@ tlsscan
 
 Testing TLS servers for weakness
 
-````
-var Tlsscan = require('tlsscan');
-var scanner = new Tlsscan({host: '127.0.0.1'});
-
-var scan = scanner.run('is_supported_tls_1.0');
-
-scan.on('end', function(data){
-  if(data.result === true){
-    console.log('The server supports TLS 1.0');
-  } else {
-    console.log('The server does not support TLS 1.0');
-  }
-})
-
-````
-
-#### List of scans
-* is_supported_tls_1.0
-* is_supported_tls_1.1
-* is_supported_tls_1.2
-* is_supported_ssl_3.0
+#### Scans
+This is the list of scans - completed and in progress
+https://github.com/skepticfx/tlsscan/issues/1
 
 
-* list_tls_versions
+#### Libraries
+* [tls.js](https://github.com/indutny/tls.js)
 
 
-#### Return types
-* {error: false, result: Boolean}
-* {error: false, result: []}
-Whatever is appropriate.
+#### License
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Ahamed Nafeez
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
