@@ -8,6 +8,7 @@ var Tlsscan = function(opts){
   this.options = {};
   this.options.host = opts.host || '127.0.0.1';
   this.options.port = opts.port || 443;
+  this.options.version = 0x3031; // By default, TLS 1.0
 }
 
 Tlsscan.prototype.run = function(scan_type){

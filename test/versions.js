@@ -4,6 +4,7 @@ var Tlsscan = require('../')
 var host = 'google.com'
 
 describe('check support for TLS versions', function(){
+  this.timeout(5000)
   var options = {}
   options.host = host
   var scanner = new Tlsscan(options)
