@@ -26,6 +26,11 @@
   },
   "homepage": "https://github.com/skepticfx/tlsscan",
   "dependencies": {
+    "debug": "^2.0.0",
+    "should": "^4.0.4",
     "tls.js": "^0.4.2"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4"
   }
 }
