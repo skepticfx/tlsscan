@@ -1,7 +1,9 @@
 /*
-Name: is_supported_tls_1.0
+Template to
+Name: is_supported_*
 Description: Checks whether the server supports TLS version 1.0
 
+Change it to do whatever you want !
 */
 
 var tlsjs = require('tls.js');

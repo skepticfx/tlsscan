@@ -1,6 +1,6 @@
 /*
-Name: is_supported_tls_1.0
-Description: Checks whether the server supports TLS version 1.0
+Name: is_supported_tls_1.1
+Description: Checks whether the server supports TLS version 1.1
 
 */
 
@@ -35,7 +35,7 @@ exports.run = function(opts){
 
   framer.hello('client', {
     cipherSuites: ciphers,
-    version: 0x0301
+    version: 0x0302
   });
 
   var sock = net.connect(opts);
@@ -46,7 +46,7 @@ exports.run = function(opts){
     var res = parser.read();
     if(res.type === 'handshake' && res.handshakeType === 'server_hello'){
       sock.end();
-      if(res.version == 0x0301)
+      if(res.version == 0x0302)
         EE.emit('end', {result: true});
       else
         EE.emit('end', {result: false});
