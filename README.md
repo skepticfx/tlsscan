@@ -3,7 +3,7 @@ tlsscan
 
 Testing TLS servers for weakness
 
-https://travis-ci.org/skepticfx/tlsscan.svg?branch=master
+[![Build Status](https://travis-ci.org/skepticfx/tlsscan.svg?branch=master)](https://travis-ci.org/skepticfx/tlsscan)
 
 #### Scans
 This is the list of scans - completed and in progress
