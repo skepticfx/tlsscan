@@ -3,8 +3,11 @@ tlsscan
 
 Testing TLS servers for weakness
 
+https://travis-ci.org/skepticfx/tlsscan.svg?branch=master
+
 #### Scans
 This is the list of scans - completed and in progress
+
 https://github.com/skepticfx/tlsscan/issues/1
 
 
