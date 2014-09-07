@@ -1,0 +1,31 @@
+{
+  "name": "tlsscan",
+  "version": "0.0.1",
+  "description": "Testing TLS servers for weakness",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skepticfx/tlsscan"
+  },
+  "keywords": [
+    "tlsscan",
+    "tls",
+    "scan",
+    "security",
+    "ssl",
+    "tls.js",
+    "tlsjs"
+  ],
+  "author": "Ahamed Nafeez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skepticfx/tlsscan/issues"
+  },
+  "homepage": "https://github.com/skepticfx/tlsscan",
+  "dependencies": {
+    "tls.js": "^0.4.2"
+  }
+}
