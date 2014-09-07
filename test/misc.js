@@ -17,4 +17,13 @@ describe('check for vulnerabilites', function(){
     })
   })
 
+  it('Secure Renegotiation support', function(done){
+    var scan = scanner.run('is_supported_secure_renegotiation')
+    scan.on('end', function(data){
+      data.result.should.be.true
+      done()
+    })
+  })
+
+
 })

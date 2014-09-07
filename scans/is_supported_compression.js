@@ -52,6 +52,7 @@ exports.run = function(opts){
       else
         EE.emit('end', {result: false});
     } else {
+      sock.end();
       if(res.type === 'alert' && res.level === 'fatal' && res.description === 'decode_error')
         EE.emit('end', {result: false});
     }
