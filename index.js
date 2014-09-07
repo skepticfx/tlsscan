@@ -1,14 +1,8 @@
 var fs = require('fs');
 var debug = require('debug');
-
+var scans = require('./scans');
 // Load all scans from ./scans
-var scans = {};
-var scanFiles = fs.readdirSync('./scans');
-debug('loaded all scan files');
-
-scanFiles.forEach(function(x){
-  scans[x.replace('.js', '')] = require('./scans/'+x);
-})
+scans = scans.load_all();
 
 var Tlsscan = function(opts){
   this.options = {};

@@ -52,7 +52,6 @@ exports.run = function(opts){
         EE.emit('end', {result: false});
     }
 
-
   })
 
 return EE;
