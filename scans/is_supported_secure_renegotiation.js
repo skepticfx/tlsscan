@@ -39,7 +39,7 @@ exports.run = function(opts){
     extensions: [
       {
         type: 'renegotiation_info',
-        body: new Buffer([0])
+        body: new Buffer([0x00])
       }
     ]
   });

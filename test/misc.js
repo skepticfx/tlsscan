@@ -11,7 +11,7 @@ describe('check for vulnerabilites', function(){
 
   it('CRIME - compression support', function(done){
     var scan = scanner.run('is_supported_compression')
-    scan.on('end', function(data){
+    scan.once('end', function(data){
       data.result.should.be.false
       done()
     })
@@ -19,7 +19,7 @@ describe('check for vulnerabilites', function(){
 
   it('Secure Renegotiation support', function(done){
     var scan = scanner.run('is_supported_secure_renegotiation')
-    scan.on('end', function(data){
+    scan.once('end', function(data){
       data.result.should.be.true
       done()
     })

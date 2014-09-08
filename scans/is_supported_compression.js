@@ -43,6 +43,7 @@ exports.run = function(opts){
   framer.pipe(sock);
   sock.pipe(parser);
 
+// Server can send an ALERT message and(or) can reset the connection.
   parser.on('readable', function(){
     var res = parser.read();
     if(res.type === 'handshake' && res.handshakeType === 'server_hello'){
@@ -57,6 +58,12 @@ exports.run = function(opts){
         EE.emit('end', {result: false});
     }
 
+  })
+
+  // handle connection reset
+  // Got an RST from server
+  sock.on('error', function(){
+    EE.emit('end', {result: false});
   })
 
 return EE;

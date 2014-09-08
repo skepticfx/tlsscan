@@ -11,7 +11,7 @@ describe('check support for TLS versions', function(){
 
   it('TLS 1.0', function(done){
     var scan = scanner.run('is_supported_tls_1.0')
-    scan.on('end', function(data){
+    scan.once('end', function(data){
       data.result.should.be.true
       done()
     })
@@ -19,7 +19,7 @@ describe('check support for TLS versions', function(){
 
   it('TLS 1.1', function(done){
     var scan = scanner.run('is_supported_tls_1.1')
-    scan.on('end', function(data){
+    scan.once('end', function(data){
       data.result.should.be.true
       done()
     })
@@ -27,7 +27,7 @@ describe('check support for TLS versions', function(){
 
   it('TLS 1.2', function(done){
     var scan = scanner.run('is_supported_tls_1.2')
-    scan.on('end', function(data){
+    scan.once('end', function(data){
       data.result.should.be.true
       done()
     })
@@ -35,7 +35,7 @@ describe('check support for TLS versions', function(){
 
   it('List of supported TLS versions', function(done){
     var scan = scanner.run('list_tls_versions')
-    scan.on('end', function(data){
+    scan.once('end', function(data){
       data.result.should.be.an.Array
       data.result.should.containEql('tls1.0')
       data.result.should.containEql('tls1.1')
