@@ -60,6 +60,12 @@ exports.run = function(opts){
 
   })
 
+  // handle connection reset
+  // Got an RST from server
+  sock.on('error', function(){
+    EE.emit('end', {result: false});
+  })
+
 return EE;
 }
 
