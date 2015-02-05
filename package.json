@@ -1,6 +1,6 @@
 {
   "name": "tlsscan",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Testing TLS servers for weakness",
   "main": "index.js",
   "scripts": {
