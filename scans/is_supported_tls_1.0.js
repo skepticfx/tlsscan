@@ -35,7 +35,7 @@ exports.run = function(opts){
 
   framer.hello('client', {
     cipherSuites: ciphers,
-    version: 0x0301
+    maxVersion: 0x0301
   });
 
   var sock = net.connect(opts);

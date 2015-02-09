@@ -28,7 +28,7 @@
   "dependencies": {
     "debug": "^2.0.0",
     "should": "^4.0.4",
-    "tls.js": "^0.4.3",
+    "tls.js": "^0.5.1",
     "watchjs": "0.0.0"
   },
   "devDependencies": {
