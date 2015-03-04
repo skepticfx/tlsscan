@@ -46,14 +46,13 @@ exports.run = function(opts){
 // Server can send an ALERT message and(or) can reset the connection.
   parser.on('readable', function(){
     var res = parser.read();
+    sock.end();
     if(res.type === 'handshake' && res.handshakeType === 'server_hello'){
-      sock.end();
       if(res.compressionMethod.toLowerCase() == 'deflate' )
         EE.emit('end', {result: true});
       else
         EE.emit('end', {result: false});
     } else {
-      sock.end();
       if(res.type === 'alert' && res.level === 'fatal' && res.description === 'decode_error')
         EE.emit('end', {result: false});
     }
