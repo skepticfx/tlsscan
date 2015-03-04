@@ -54,6 +54,11 @@ exports.run = function(opts){
   });
 
   var sock = net.connect(opts);
+  sock.setTimeout(4000);
+  sock.on('timeout', function(){
+    EE.emit('end', {result: 'error'});
+  });
+  
   framer.pipe(sock);
   sock.pipe(parser);
 
