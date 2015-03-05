@@ -5,8 +5,25 @@ Testing TLS servers for weakness
 
 [![Build Status](https://travis-ci.org/skepticfx/tlsscan.svg?branch=master)](https://travis-ci.org/skepticfx/tlsscan)
 
+#### Add to your project
+
+```
+npm install -S tlsscan
+```
+
 #### Usage
 ````
+var Tlsscan = require('tlsscan');
+var tlsscan = new Tlsscan({host: 'google.com'});
+
+// Load your required scan. Refer the 'scans' directory.
+var scanner = tlsscan.run('is_supported_compression');
+scanner.once('end', function(scan){
+  if(scan.result == true)
+    console.log('Supports TLS compression');
+  else
+    console.log('Does not support TLS compression');
+});
 
 
 `````
