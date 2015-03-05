@@ -5,7 +5,7 @@ var debug = require('debug')('scans');
 exports.load_all = function(){
   // Load all scans from ./scans
   var scans = {};
-  var scanFiles = fs.readdirSync('./scans');
+  var scanFiles = fs.readdirSync(__dirname);
   debug('loaded all scan files');
 
   scanFiles.forEach(function(x){
