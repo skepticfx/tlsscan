@@ -17,7 +17,7 @@ return scans;
 }
 
 exports.load = function(scan_type){
-  if(fs.existsSync('./scans/'+scan_type+'.js')){
+  if(fs.existsSync(__dirname + '' + scan_type+'.js')){
     return require('./'+scan_type+'.js');
   }else{
     console.log('The specified scan: ' + scan_type + ' is not found in the scan list.');
