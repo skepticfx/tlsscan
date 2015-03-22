@@ -1,4 +1,5 @@
 var fs = require('fs');
+var path = require('path');
 var debug = require('debug')('scans');
 
 
@@ -17,8 +18,8 @@ return scans;
 }
 
 exports.load = function(scan_type){
-  if(fs.existsSync(__dirname + '' + scan_type+'.js')){
-    return require('./'+scan_type+'.js');
+  if(fs.existsSync(path.join(__dirname, scan_type)+'.js')){
+    return require('./'+ scan_type + '.js');
   }else{
     console.log('The specified scan: ' + scan_type + ' is not found in the scan list.');
     process.exit(1);
