@@ -1,6 +1,6 @@
 /*
-Name: is_supported_tls_1.0
-Description: Checks whether the server supports TLS version 1.0
+Name: is_supported_export_ciphers
+Description: Checks whether the server supports any export ciphers
 
 */
 
